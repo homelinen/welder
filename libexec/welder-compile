@@ -37,6 +37,9 @@ then
   $WELDER_ROOT/libexec/priv/parse-config "./config.yml" > $tmp_dir/config-variables
 fi
 
+# Get config from playbook
+$WELDER_ROOT/libexec/priv/parse-config "$playbook.yml" >> $tmp_dir/config-variables
+
 if [ -f "./vault.yml" ]
 then
   $WELDER_ROOT/libexec/priv/parse-config "./vault.yml" >> $tmp_dir/config-variables
