@@ -25,7 +25,7 @@ rsync -av --delete  --prune-empty-dirs --include="*/" --include="modules/*/files
 if test -n "$(find $tmp_dir -name '*.liquid' -print -quit)"
 then
   __info "compiling *.liquid templates"
-  $WELDER_ROOT/libexec/priv/compile-templates $tmp_dir
+  $WELDER_ROOT/libexec/priv/compile-templates $tmp_dir $playbook.yml
   __success "compiled templates"
 fi
 
