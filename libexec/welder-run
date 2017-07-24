@@ -25,7 +25,7 @@ function __run_scripts() {
     do
       __info "script $script\n"
 
-      if [ -z ${sudo_pass+x} ]
+      if [ -z ${sudo_pass} ]
       then
         # no sudo_pass set, run the script directly
         ssh -t "$cfg_ssh_url" -p "$cfg_ssh_port" "$(< $script)"
