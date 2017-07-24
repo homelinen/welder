@@ -156,6 +156,8 @@ echo $cfg_app_dir
 **NOTE**: In order for this to work reliably, `config.yml` has to be fairly flat
 and simple - nested hashes are not supported.
 
+For local settings variables can be defined in `playbook.yml`.
+
 ### Security Notes
 
 Don't store any sensitive information (passwords etc.) in `config.yml`. If you
